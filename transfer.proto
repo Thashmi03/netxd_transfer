@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package ="https://github.com/Thashmi03/netxd_transfer";
+package netxd_transfer;
+
+service TransferService{
+    rpc Transfer(Details) returns (DetailResponse);
+}
+message Details {
+    int64 Transaction_id=1;
+    int64 From_account = 2;
+    int64 To_account=3;
+    int64 Amount=4;
+}
+message DetailResponse {
+    int64 Transaction_id=1;
+    
+}
